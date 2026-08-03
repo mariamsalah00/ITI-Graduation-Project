@@ -57,9 +57,11 @@ export const getTheme = (mode = 'light') => {
     spacing: 4, // 4px base — matches --space-* scale in variables.css
     components: {
       MuiButton: {
-        styleOverrides: {
-          root: { borderRadius: 2, paddingInline: 24, paddingBlock: 12 },
-        },
+  styleOverrides: {
+    contained: {
+      color: mode === 'dark' ? '#241f1a' : '#f4efe7',
+    },
+  },
       },
       MuiTextField: {
         defaultProps: { variant: 'outlined', size: 'medium' },
