@@ -1,0 +1,136 @@
+{
+  "nav": {
+    "home": "Home",
+    "shop": "Shop",
+    "about": "About",
+    "contact": "Contact",
+    "cart": "Cart",
+    "wishlist": "Wishlist",
+    "account": "Account",
+    "login": "Log in",
+    "register": "Register",
+    "logout": "Log out",
+    "search": "Search"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "common": {
+    "loading": "Loading…",
+    "comingSoon": "This page is coming soon.",
+    "errorGeneric": "Something went wrong. Please try again.",
+    "addToCart": "Add to cart",
+    "outOfStock": "Out of stock",
+    "viewAll": "View all",
+    "quantity": "Quantity",
+    "total": "Total",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "free": "Free",
+    "remove": "Remove",
+    "save": "Save",
+    "cancel": "Cancel",
+    "continue": "Continue",
+    "back": "Back"
+  },
+  "home": {
+    "heroTitle": "Nourish your skin, one ritual at a time",
+    "heroSubtitle": "Clean, effective skincare formulated with skin-first ingredients.",
+    "heroCta": "Shop Bestsellers",
+    "bestsellers": "Bestsellers",
+    "newArrivals": "New Arrivals",
+    "quizBanner": "Not sure where to start?",
+    "quizCta": "Take the Skin Quiz"
+  },
+  "shop": {
+    "title": "Shop All",
+    "search": "Search products",
+    "filterCategory": "Category",
+    "filterSkinType": "Skin Type",
+    "sortBy": "Sort by",
+    "sortPriceAsc": "Price: Low to High",
+    "sortPriceDesc": "Price: High to Low",
+    "sortRating": "Top Rated",
+    "noResultsTitle": "No products found",
+    "noResultsBody": "Try adjusting your search or filters.",
+    "clearFilters": "Clear filters"
+  },
+  "product": {
+    "ingredients": "Ingredients",
+    "skinType": "Skin Type",
+    "skinConcern": "Skin Concern",
+    "relatedTitle": "You may also like",
+    "reviews": "reviews"
+  },
+  "cart": {
+    "title": "Your Cart",
+    "emptyTitle": "Your cart is empty",
+    "emptyBody": "Looks like you haven't added anything yet.",
+    "emptyCta": "Continue Shopping",
+    "checkoutCta": "Proceed to Checkout"
+  },
+  "wishlist": {
+    "title": "Your Wishlist",
+    "emptyTitle": "Your wishlist is empty",
+    "emptyBody": "Save products you love to find them here later.",
+    "emptyCta": "Browse Products"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "shippingDetails": "Shipping Details",
+    "paymentDetails": "Payment Details",
+    "orderSummary": "Order Summary",
+    "placeOrder": "Place Order",
+    "successTitle": "Order placed!",
+    "successBody": "Thank you — a confirmation has been sent to your email."
+  },
+  "auth": {
+    "loginTitle": "Log in to your account",
+    "loginSubtitle": "New to GLOWCARE?",
+    "registerLink": "Create an account",
+    "registerTitle": "Create your account",
+    "registerSubtitle": "Already have an account?",
+    "loginLink": "Log in",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "name": "Full Name",
+    "loginCta": "Log In",
+    "registerCta": "Create Account",
+    "adminHint": "Admin demo: admin@glowcare.com / Admin123"
+  },
+  "quiz": {
+    "title": "Find Your Routine",
+    "subtitle": "Two quick questions to personalize your recommendations.",
+    "skinTypeQuestion": "What is your skin type?",
+    "skinConcernQuestion": "What is your main skin concern?",
+    "seeResults": "See My Recommendations",
+    "restart": "Retake Quiz",
+    "resultsTitle": "Recommended for you"
+  },
+  "profile": {
+    "title": "My Profile",
+    "orderHistory": "Order History",
+    "noOrders": "You haven't placed any orders yet."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The page you're looking for doesn't exist or has moved.",
+    "cta": "Back to Home"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "totalProducts": "Total Products",
+    "totalCategories": "Total Categories",
+    "products": "Products",
+    "categories": "Categories",
+    "addProduct": "Add Product",
+    "addCategory": "Add Category",
+    "editProduct": "Edit Product",
+    "editCategory": "Edit Category",
+    "deleteConfirmTitle": "Delete this item?",
+    "deleteConfirmBody": "This action can't be undone.",
+    "noProducts": "No products yet.",
+    "noCategories": "No categories yet."
+  }
+}

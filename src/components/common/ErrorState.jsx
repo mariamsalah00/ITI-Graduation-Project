@@ -1,0 +1,20 @@
+import { Box, Typography, Button } from '@mui/material';
+import { FiAlertCircle } from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
+
+export function ErrorState({ message, onRetry }) {
+  const { t } = useTranslation();
+  return (
+    <Box sx={{ textAlign: 'center', py: 8, px: 2 }}>
+      <FiAlertCircle size={32} color="var(--color-error)" />
+      <Typography variant="h6" sx={{ mt: 2 }}>
+        {message || t('common.errorGeneric')}
+      </Typography>
+      {onRetry && (
+        <Button variant="outlined" color="error" onClick={onRetry} sx={{ mt: 2 }}>
+          Try again
+        </Button>
+      )}
+    </Box>
+  );
+}

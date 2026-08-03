@@ -1,0 +1,87 @@
+/*
+  Design tokens — DERIVED FROM SCREENSHOTS, NOT INSPECT VALUES.
+  Every value below is a visual approximation of the Figma thumbnails you
+  shared (warm cream backgrounds, near-black footer/text, sand accent,
+  black CTAs). Swap these for exact hex/px once you export them from
+  Figma's Inspect panel — nothing else in the app should need to change,
+  because every component reads color/spacing from here, not hardcoded
+  values.
+*/
+
+:root {
+  /* ---- Color: neutrals ---- */
+  --color-bg: #f4efe7;           /* page background, warm cream */
+  --color-surface: #fbf9f5;      /* card / panel background */
+  --color-surface-alt: #ece5d8;  /* secondary panel, e.g. quiz result bg */
+  --color-border: #e2d9c8;       /* hairline dividers, input borders */
+
+  /* ---- Color: ink ---- */
+  --color-text-primary: #241f1a;   /* headings, body copy */
+  --color-text-secondary: #6f6559; /* captions, meta, muted labels */
+  --color-text-inverse: #f4efe7;   /* text on dark surfaces (footer) */
+
+  /* ---- Color: dark surface (footer / admin sidebar) ---- */
+  --color-ink: #211d19;
+  --color-ink-alt: #2c2721;
+
+  /* ---- Color: accent ---- */
+  --color-accent: #a9967c;        /* sand/taupe — links, focus rings, tags */
+  --color-accent-soft: #ddd0ba;   /* hover backgrounds, chips */
+  --color-cta: #1a1714;           /* primary button fill (near-black) */
+  --color-cta-hover: #35302a;
+
+  /* ---- Color: feedback ---- */
+  --color-success: #4f7a5b;
+  --color-error: #a3403a;
+  --color-warning: #b9863f;
+  --color-info: #5b7286;
+
+  /* ---- Typography ---- */
+  --font-heading: 'Jost', 'Poppins', sans-serif;   /* placeholder — confirm actual family */
+  --font-body: 'Work Sans', 'Inter', sans-serif;   /* placeholder — confirm actual family */
+
+  /* ---- Spacing scale (4px base, matches MUI default) ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* ---- Radius & elevation ---- */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --shadow-card: 0 1px 3px rgba(36, 31, 26, 0.08);
+
+  /* ---- Layout ---- */
+  --container-max: 1280px;
+  --header-height: 72px;
+}
+
+[data-theme='dark'] {
+  --color-bg: #1c1916;
+  --color-surface: #242019;
+  --color-surface-alt: #2c2721;
+  --color-border: #3a342c;
+
+  --color-text-primary: #f4efe7;
+  --color-text-secondary: #b3a795;
+  /* --color-text-inverse is intentionally NOT redefined here. It means
+     "text color for use on a dark ink surface" (footer, admin sidebar).
+     Those surfaces stay dark in both themes, so the text on them must
+     stay light in both themes too — the old override pointed it at
+     --color-bg, which in dark mode is *also* dark, producing near-
+     invisible dark-on-dark text. That was the actual footer bug. */
+
+  /* Ink surfaces get a touch darker than the page background here so the
+     footer/sidebar still read as a distinct surface instead of blending
+     into a page that's now dark too. */
+  --color-ink: #141210;
+  --color-ink-alt: #1c1815;
+
+  --color-cta: #f4efe7;
+  --color-cta-hover: #ddd0ba;
+}

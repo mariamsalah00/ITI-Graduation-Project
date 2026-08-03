@@ -1,0 +1,10 @@
+[
+  { "id": "c001", "name": "Cleanser", "description": "Remove impurities without stripping the skin." },
+  { "id": "c002", "name": "Toner", "description": "Balance and prep skin after cleansing." },
+  { "id": "c003", "name": "Serum", "description": "Targeted, concentrated active treatments." },
+  { "id": "c004", "name": "Moisturizer", "description": "Lock in hydration and support the skin barrier." },
+  { "id": "c005", "name": "Treatment", "description": "Retinoids, oils, and other focused treatments." },
+  { "id": "c006", "name": "Mask", "description": "Weekly rituals for deeper results." },
+  { "id": "c007", "name": "Sunscreen", "description": "Daily broad-spectrum protection." },
+  { "id": "c008", "name": "Eye Care", "description": "Formulas for the delicate eye area." }
+]

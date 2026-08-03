@@ -1,0 +1,136 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "shop": "المتجر",
+    "about": "من نحن",
+    "contact": "تواصل معنا",
+    "cart": "السلة",
+    "wishlist": "المفضلة",
+    "account": "الحساب",
+    "login": "تسجيل الدخول",
+    "register": "إنشاء حساب",
+    "logout": "تسجيل الخروج",
+    "search": "بحث"
+  },
+  "footer": {
+    "rights": "جميع الحقوق محفوظة."
+  },
+  "common": {
+    "loading": "جاري التحميل…",
+    "comingSoon": "هذه الصفحة قادمة قريبًا.",
+    "errorGeneric": "حدث خطأ ما. حاول مرة أخرى.",
+    "addToCart": "أضف إلى السلة",
+    "outOfStock": "غير متوفر",
+    "viewAll": "عرض الكل",
+    "quantity": "الكمية",
+    "total": "الإجمالي",
+    "subtotal": "المجموع الفرعي",
+    "shipping": "الشحن",
+    "free": "مجاني",
+    "remove": "إزالة",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "continue": "متابعة",
+    "back": "رجوع"
+  },
+  "home": {
+    "heroTitle": "اعتنِ ببشرتك، طقسًا تلو الآخر",
+    "heroSubtitle": "منتجات عناية بالبشرة نظيفة وفعالة بمكونات تراعي بشرتك أولاً.",
+    "heroCta": "تسوق الأكثر مبيعًا",
+    "bestsellers": "الأكثر مبيعًا",
+    "newArrivals": "وصل حديثًا",
+    "quizBanner": "لست متأكدة من أين تبدئين؟",
+    "quizCta": "ابدئي اختبار البشرة"
+  },
+  "shop": {
+    "title": "تسوقي الكل",
+    "search": "ابحثي عن منتج",
+    "filterCategory": "الفئة",
+    "filterSkinType": "نوع البشرة",
+    "sortBy": "ترتيب حسب",
+    "sortPriceAsc": "السعر: من الأقل للأعلى",
+    "sortPriceDesc": "السعر: من الأعلى للأقل",
+    "sortRating": "الأعلى تقييمًا",
+    "noResultsTitle": "لم يتم العثور على منتجات",
+    "noResultsBody": "حاولي تعديل البحث أو الفلاتر.",
+    "clearFilters": "مسح الفلاتر"
+  },
+  "product": {
+    "ingredients": "المكونات",
+    "skinType": "نوع البشرة",
+    "skinConcern": "مشكلة البشرة",
+    "relatedTitle": "قد يعجبك أيضًا",
+    "reviews": "تقييمات"
+  },
+  "cart": {
+    "title": "سلة التسوق",
+    "emptyTitle": "سلتك فارغة",
+    "emptyBody": "يبدو أنك لم تضيفي شيئًا بعد.",
+    "emptyCta": "متابعة التسوق",
+    "checkoutCta": "المتابعة إلى الدفع"
+  },
+  "wishlist": {
+    "title": "قائمة المفضلة",
+    "emptyTitle": "قائمة المفضلة فارغة",
+    "emptyBody": "احفظي المنتجات التي تحبينها لتجديها هنا لاحقًا.",
+    "emptyCta": "تصفح المنتجات"
+  },
+  "checkout": {
+    "title": "الدفع",
+    "shippingDetails": "بيانات الشحن",
+    "paymentDetails": "بيانات الدفع",
+    "orderSummary": "ملخص الطلب",
+    "placeOrder": "إتمام الطلب",
+    "successTitle": "تم تقديم الطلب!",
+    "successBody": "شكرًا لك — تم إرسال تأكيد إلى بريدك الإلكتروني."
+  },
+  "auth": {
+    "loginTitle": "تسجيل الدخول إلى حسابك",
+    "loginSubtitle": "جديدة على GLOWCARE؟",
+    "registerLink": "إنشاء حساب",
+    "registerTitle": "أنشئي حسابك",
+    "registerSubtitle": "لديك حساب بالفعل؟",
+    "loginLink": "تسجيل الدخول",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "name": "الاسم الكامل",
+    "loginCta": "تسجيل الدخول",
+    "registerCta": "إنشاء حساب",
+    "adminHint": "حساب تجريبي للمشرف: admin@glowcare.com / Admin123"
+  },
+  "quiz": {
+    "title": "اكتشفي روتينك",
+    "subtitle": "سؤالان سريعان لتخصيص توصياتك.",
+    "skinTypeQuestion": "ما نوع بشرتك؟",
+    "skinConcernQuestion": "ما هي مشكلة بشرتك الرئيسية؟",
+    "seeResults": "عرض توصياتي",
+    "restart": "إعادة الاختبار",
+    "resultsTitle": "موصى به لك"
+  },
+  "profile": {
+    "title": "ملفي الشخصي",
+    "orderHistory": "سجل الطلبات",
+    "noOrders": "لم تقومي بأي طلب حتى الآن."
+  },
+  "notFound": {
+    "title": "الصفحة غير موجودة",
+    "body": "الصفحة التي تبحثين عنها غير موجودة أو تم نقلها.",
+    "cta": "العودة إلى الرئيسية"
+  },
+  "admin": {
+    "dashboard": "لوحة التحكم",
+    "totalProducts": "إجمالي المنتجات",
+    "totalCategories": "إجمالي الفئات",
+    "products": "المنتجات",
+    "categories": "الفئات",
+    "addProduct": "إضافة منتج",
+    "addCategory": "إضافة فئة",
+    "editProduct": "تعديل المنتج",
+    "editCategory": "تعديل الفئة",
+    "deleteConfirmTitle": "حذف هذا العنصر؟",
+    "deleteConfirmBody": "لا يمكن التراجع عن هذا الإجراء.",
+    "noProducts": "لا توجد منتجات بعد.",
+    "noCategories": "لا توجد فئات بعد."
+  }
+}

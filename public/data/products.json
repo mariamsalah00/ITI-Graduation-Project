@@ -1,0 +1,307 @@
+[
+  {
+    "id": "p001",
+    "name": "Gentle Balancing Toner",
+    "brand": "Glowcare",
+    "category": "Toner",
+    "image": "https://placehold.co/600x600/ece5d8/6f6559?text=Gentle%20Balancing%20Toner",
+    "description": "A pH-balancing toner with rose water and niacinamide that preps skin to absorb serums more effectively, without stripping natural oils.",
+    "price": 28,
+    "oldPrice": 34,
+    "rating": 4.6,
+    "ingredients": [
+      "Rose Water",
+      "Niacinamide",
+      "Panthenol",
+      "Glycerin"
+    ],
+    "skinType": [
+      "Normal",
+      "Combination"
+    ],
+    "skinConcern": [
+      "Dullness",
+      "Uneven Texture"
+    ],
+    "stock": 42
+  },
+  {
+    "id": "p002",
+    "name": "Radiance Vitamin C Serum",
+    "brand": "Glowcare",
+    "category": "Serum",
+    "image": "https://placehold.co/600x600/ece5d8/6f6559?text=Radiance%20Vitamin%20C%20Serum",
+    "description": "15% stabilized vitamin C serum that brightens, evens tone, and softens the look of fine lines with daily use.",
+    "price": 48,
+    "oldPrice": null,
+    "rating": 4.8,
+    "ingredients": [
+      "Vitamin C",
+      "Ferulic Acid",
+      "Vitamin E",
+      "Hyaluronic Acid"
+    ],
+    "skinType": [
+      "Normal",
+      "Dry",
+      "Combination"
+    ],
+    "skinConcern": [
+      "Dullness",
+      "Hyperpigmentation",
+      "Fine Lines"
+    ],
+    "stock": 30
+  },
+  {
+    "id": "p003",
+    "name": "Deep Hydration Moisturizer",
+    "brand": "Glowcare",
+    "category": "Moisturizer",
+    "image": "https://placehold.co/600x600/ece5d8/6f6559?text=Deep%20Hydration%20Moisturizer",
+    "description": "A rich, ceramide-based cream that restores the moisture barrier and locks in hydration for up to 24 hours.",
+    "price": 42,
+    "oldPrice": null,
+    "rating": 4.7,
+    "ingredients": [
+      "Ceramides",
+      "Squalane",
+      "Hyaluronic Acid",
+      "Shea Butter"
+    ],
+    "skinType": [
+      "Dry",
+      "Normal"
+    ],
+    "skinConcern": [
+      "Dehydration",
+      "Sensitivity"
+    ],
+    "stock": 55
+  },
+  {
+    "id": "p004",
+    "name": "Purifying Clay Cleanser",
+    "brand": "Glowcare",
+    "category": "Cleanser",
+    "image": "https://placehold.co/600x600/ece5d8/6f6559?text=Purifying%20Clay%20Cleanser",
+    "description": "A creamy clay cleanser that lifts away impurities and excess oil without disrupting the skin barrier.",
+    "price": 24,
+    "oldPrice": 28,
+    "rating": 4.4,
+    "ingredients": [
+      "Kaolin Clay",
+      "Tea Tree Oil",
+      "Aloe Vera"
+    ],
+    "skinType": [
+      "Oily",
+      "Combination"
+    ],
+    "skinConcern": [
+      "Excess Oil",
+      "Congestion"
+    ],
+    "stock": 60
+  },
+  {
+    "id": "p005",
+    "name": "Overnight Renewal Retinol",
+    "brand": "Glowcare",
+    "category": "Treatment",
+    "image": "https://placehold.co/600x600/ece5d8/6f6559?text=Overnight%20Renewal%20Retinol",
+    "description": "An encapsulated 0.3% retinol treatment that smooths texture and refines pores while you sleep.",
+    "price": 56,
+    "oldPrice": null,
+    "rating": 4.5,
+    "ingredients": [
+      "Encapsulated Retinol",
+      "Squalane",
+      "Bakuchiol"
+    ],
+    "skinType": [
+      "Normal",
+      "Combination",
+      "Oily"
+    ],
+    "skinConcern": [
+      "Fine Lines",
+      "Uneven Texture",
+      "Large Pores"
+    ],
+    "stock": 25
+  },
+  {
+    "id": "p006",
+    "name": "Soothing Oat Cream",
+    "brand": "Glowcare",
+    "category": "Moisturizer",
+    "image": "https://placehold.co/600x600/ece5d8/6f6559?text=Soothing%20Oat%20Cream",
+    "description": "A fragrance-free barrier cream formulated with colloidal oatmeal to calm redness and irritation.",
+    "price": 38,
+    "oldPrice": null,
+    "rating": 4.9,
+    "ingredients": [
+      "Colloidal Oatmeal",
+      "Centella Asiatica",
+      "Ceramides"
+    ],
+    "skinType": [
+      "Sensitive",
+      "Dry"
+    ],
+    "skinConcern": [
+      "Redness",
+      "Sensitivity"
+    ],
+    "stock": 33
+  },
+  {
+    "id": "p007",
+    "name": "Exfoliating Enzyme Mask",
+    "brand": "Glowcare",
+    "category": "Mask",
+    "image": "https://placehold.co/600x600/ece5d8/6f6559?text=Exfoliating%20Enzyme%20Mask",
+    "description": "A weekly papaya-enzyme mask that resurfaces skin gently, revealing a brighter, smoother complexion.",
+    "price": 32,
+    "oldPrice": 36,
+    "rating": 4.3,
+    "ingredients": [
+      "Papaya Enzyme",
+      "Lactic Acid",
+      "Honey"
+    ],
+    "skinType": [
+      "Normal",
+      "Dull",
+      "Combination"
+    ],
+    "skinConcern": [
+      "Dullness",
+      "Uneven Texture"
+    ],
+    "stock": 20
+  },
+  {
+    "id": "p008",
+    "name": "Mineral Sunscreen SPF 50",
+    "brand": "Glowcare",
+    "category": "Sunscreen",
+    "image": "https://placehold.co/600x600/ece5d8/6f6559?text=Mineral%20Sunscreen%20SPF%2050",
+    "description": "A weightless, non-whitening mineral sunscreen that protects without clogging pores.",
+    "price": 34,
+    "oldPrice": null,
+    "rating": 4.6,
+    "ingredients": [
+      "Zinc Oxide",
+      "Titanium Dioxide",
+      "Niacinamide"
+    ],
+    "skinType": [
+      "All"
+    ],
+    "skinConcern": [
+      "Sun Protection",
+      "Sensitivity"
+    ],
+    "stock": 70
+  },
+  {
+    "id": "p009",
+    "name": "Balancing Eye Cream",
+    "brand": "Glowcare",
+    "category": "Eye Care",
+    "image": "https://placehold.co/600x600/ece5d8/6f6559?text=Balancing%20Eye%20Cream",
+    "description": "A lightweight caffeine and peptide eye cream that reduces puffiness and the look of fine lines.",
+    "price": 30,
+    "oldPrice": null,
+    "rating": 4.5,
+    "ingredients": [
+      "Caffeine",
+      "Peptides",
+      "Hyaluronic Acid"
+    ],
+    "skinType": [
+      "All"
+    ],
+    "skinConcern": [
+      "Puffiness",
+      "Fine Lines"
+    ],
+    "stock": 40
+  },
+  {
+    "id": "p010",
+    "name": "Clarifying Salicylic Serum",
+    "brand": "Glowcare",
+    "category": "Serum",
+    "image": "https://placehold.co/600x600/ece5d8/6f6559?text=Clarifying%20Salicylic%20Serum",
+    "description": "A 2% BHA serum that unclogs pores and smooths texture for clearer-looking skin.",
+    "price": 30,
+    "oldPrice": null,
+    "rating": 4.4,
+    "ingredients": [
+      "Salicylic Acid",
+      "Willow Bark",
+      "Zinc PCA"
+    ],
+    "skinType": [
+      "Oily",
+      "Combination"
+    ],
+    "skinConcern": [
+      "Congestion",
+      "Excess Oil",
+      "Large Pores"
+    ],
+    "stock": 45
+  },
+  {
+    "id": "p011",
+    "name": "Restorative Facial Oil",
+    "brand": "Glowcare",
+    "category": "Treatment",
+    "image": "https://placehold.co/600x600/ece5d8/6f6559?text=Restorative%20Facial%20Oil",
+    "description": "A blend of rosehip and marula oils that nourishes and softens dry, dull-looking skin overnight.",
+    "price": 44,
+    "oldPrice": 50,
+    "rating": 4.7,
+    "ingredients": [
+      "Rosehip Oil",
+      "Marula Oil",
+      "Vitamin E"
+    ],
+    "skinType": [
+      "Dry",
+      "Normal"
+    ],
+    "skinConcern": [
+      "Dehydration",
+      "Dullness"
+    ],
+    "stock": 18
+  },
+  {
+    "id": "p012",
+    "name": "Refreshing Micellar Water",
+    "brand": "Glowcare",
+    "category": "Cleanser",
+    "image": "https://placehold.co/600x600/ece5d8/6f6559?text=Refreshing%20Micellar%20Water",
+    "description": "A no-rinse micellar water that lifts makeup and impurities in one gentle swipe.",
+    "price": 20,
+    "oldPrice": null,
+    "rating": 4.2,
+    "ingredients": [
+      "Micellar Technology",
+      "Cucumber Extract",
+      "Glycerin"
+    ],
+    "skinType": [
+      "All"
+    ],
+    "skinConcern": [
+      "Sensitivity"
+    ],
+    "stock": 50
+  }
+]
