@@ -11,6 +11,11 @@ export default function Cart() {
   const { items, updateQty, removeItem, totalPrice } = useCart();
   const navigate = useNavigate();
 
+  const SHIPPING_FEE = 10;
+  const isFreeShipping = totalPrice > 50;
+  const shippingCost = isFreeShipping ? 0 : SHIPPING_FEE;
+  const finalTotal = totalPrice + shippingCost;
+
   if (items.length === 0) {
     return (
       <Container maxWidth="sm" sx={{ py: 8 }}>
@@ -63,19 +68,26 @@ export default function Cart() {
         <Grid item xs={12} md={4}>
           <Box sx={{ border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', p: 3 }}>
             <Typography variant="h6" sx={{ mb: 2 }}>{t('checkout.orderSummary')}</Typography>
+            
             <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-              <Typography color="text.secondary">{t('common.subtotal')}</Typography>
+              <Typography color="text.secondary">{t('common.subtotal', 'Subtotal')}</Typography>
               <Typography>${totalPrice.toFixed(2)}</Typography>
             </Box>
+
             <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2 }}>
-              <Typography color="text.secondary">{t('common.shipping')}</Typography>
-              <Typography>{t('common.free')}</Typography>
+              <Typography color="text.secondary">{t('common.shipping', 'Shipping')}</Typography>
+              <Typography sx={{ color: isFreeShipping ? 'success.main' : 'text.primary', fontWeight: isFreeShipping ? 600 : 400 }}>
+                {isFreeShipping ? t('common.free', 'Free') : `$${shippingCost.toFixed(2)}`}
+              </Typography>
             </Box>
+
             <Divider sx={{ mb: 2 }} />
+
             <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 3 }}>
-              <Typography sx={{ fontWeight: 500 }}>{t('common.total')}</Typography>
-              <Typography sx={{ fontWeight: 500 }}>${totalPrice.toFixed(2)}</Typography>
+              <Typography sx={{ fontWeight: 500 }}>{t('common.total', 'Total')}</Typography>
+              <Typography sx={{ fontWeight: 500 }}>${finalTotal.toFixed(2)}</Typography>
             </Box>
+
             <Button component={Link} to="/checkout" fullWidth variant="contained" color="primary" size="large">
               {t('cart.checkoutCta')}
             </Button>

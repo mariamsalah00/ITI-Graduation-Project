@@ -16,6 +16,11 @@ export default function Checkout() {
   const [orders, setOrders] = useLocalStorage('glowcare_orders', []);
   const navigate = useNavigate();
 
+  const SHIPPING_FEE = 10; 
+  const isFreeShipping = totalPrice > 50;
+  const shippingCost = isFreeShipping ? 0 : SHIPPING_FEE;
+  const finalTotal = totalPrice + shippingCost;
+
   const formik = useFormik({
     initialValues: { fullName: '', address: '', city: '', postalCode: '', phone: '', cardNumber: '', cardExpiry: '', cardCvc: '' },
     validationSchema: checkoutSchema,
@@ -24,7 +29,9 @@ export default function Checkout() {
         id: `ord_${Date.now()}`,
         userEmail: currentUser?.email,
         items,
-        total: totalPrice,
+        subtotal: totalPrice,
+        shippingFee: shippingCost,
+        total: finalTotal, 
         placedAt: new Date().toISOString(),
         shipTo: { fullName: values.fullName, address: values.address, city: values.city },
       };
@@ -109,11 +116,28 @@ export default function Checkout() {
                   <Typography variant="body2">${(item.price * item.qty).toFixed(2)}</Typography>
                 </Box>
               ))}
+              
               <Divider sx={{ my: 2 }} />
-              <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 3 }}>
-                <Typography sx={{ fontWeight: 500 }}>{t('common.total')}</Typography>
-                <Typography sx={{ fontWeight: 500 }}>${totalPrice.toFixed(2)}</Typography>
+
+              <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
+                <Typography variant="body2">{t('checkout.subtotal', 'Subtotal')}</Typography>
+                <Typography variant="body2">${totalPrice.toFixed(2)}</Typography>
               </Box>
+
+              <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
+                <Typography variant="body2">{t('checkout.shipping', 'Shipping')}</Typography>
+                <Typography variant="body2" sx={{ color: isFreeShipping ? 'success.main' : 'text.primary', fontWeight: isFreeShipping ? 600 : 400 }}>
+                  {isFreeShipping ? t('checkout.free', 'FREE') : `$${shippingCost.toFixed(2)}`}
+                </Typography>
+              </Box>
+
+              <Divider sx={{ my: 2 }} />
+
+              <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 3 }}>
+                <Typography sx={{ fontWeight: 600 }}>{t('common.total')}</Typography>
+                <Typography sx={{ fontWeight: 600 }}>${finalTotal.toFixed(2)}</Typography>
+              </Box>
+
               <Button type="submit" fullWidth variant="contained" color="primary" size="large" disabled={formik.isSubmitting}>
                 {t('checkout.placeOrder')}
               </Button>

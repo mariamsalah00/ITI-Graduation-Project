@@ -1,5 +1,5 @@
 import { Box, Container, Typography, Grid } from '@mui/material';
-
+import about from '/assets/aboutimg.jfif'
 const VALUES = [
   { title: 'Clean formulas', body: 'Every product is formulated without sulfates, parabens, or synthetic fragrance.' },
   { title: 'Dermatologist tested', body: 'Each formula is tested for safety and efficacy before it reaches you.' },
@@ -9,9 +9,13 @@ const VALUES = [
 export default function About() {
   return (
     <Box>
-      <Box sx={{ bgcolor: 'var(--color-surface-alt)', py: { xs: 8, md: 10 } }}>
+      <Box sx={{ backgroundImage: `url(${about})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+         py: { xs: 15, md: 25 }}}>
         <Container maxWidth="sm" sx={{ textAlign: 'center' }}>
-          <Typography variant="h3" sx={{ mb: 2 }}>Our Story</Typography>
+          <Typography variant="h3" sx={{ mb: 2 ,color:'var(--color-ink)'}}>Our Story</Typography>
           <Typography color="text.secondary">
             GLOWCARE started with a simple belief: skincare should be effective, honest, and kind to the
             skin you're in. Every formula is built around a handful of proven ingredients, backed by

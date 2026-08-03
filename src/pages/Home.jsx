@@ -5,7 +5,7 @@ import { useProducts } from '../context/ProductsContext';
 import { ProductCard } from '../components/common/ProductCard';
 import { Loader } from '../components/common/Loader';
 import { ErrorState } from '../components/common/ErrorState';
-
+import homeImg from '/assets/landing page.png'
 export default function Home() {
   const { t } = useTranslation();
   const { products, loading, error, retry } = useProducts();
@@ -16,9 +16,13 @@ export default function Home() {
   return (
     <Box>
       {/* Hero */}
-      <Box sx={{ bgcolor: 'var(--color-surface-alt)', py: { xs: 8, md: 12 } }}>
+      <Box sx={{ backgroundImage: `url(${homeImg})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+   py: { xs: 20, md: 30 } }}>
         <Container maxWidth="md" sx={{ textAlign: 'center' }}>
-          <Typography variant="h2" sx={{ fontSize: { xs: '2rem', md: '3rem' }, mb: 2 }}>
+          <Typography variant="h2" sx={{ fontSize: { xs: '2rem', md: '3rem' }, mb: 2,color:"var(--color-ink)" }}>
             {t('home.heroTitle')}
           </Typography>
           <Typography color="text.secondary" sx={{ maxWidth: 480, mx: 'auto', mb: 4 }}>
