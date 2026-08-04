@@ -5,7 +5,7 @@ import { useProducts } from '../context/ProductsContext';
 import { ProductCard } from '../components/common/ProductCard';
 import { Loader } from '../components/common/Loader';
 import { ErrorState } from '../components/common/ErrorState';
-import homeImg from '/assets/landing page.png'
+import homeImg from '/assets/landingpage.png'
 export default function Home() {
   const { t } = useTranslation();
   const { products, loading, error, retry } = useProducts();

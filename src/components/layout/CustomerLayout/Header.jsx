@@ -1,24 +1,5 @@
 import { useState } from 'react';
-import {
-  AppBar,
-  Toolbar,
-  Box,
-  Container,
-  Typography,
-  Stack,
-  IconButton,
-  Badge,
-  Drawer,
-  List,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  Divider,
-  Menu,
-  MenuItem,
-  TextField,
-  InputAdornment,
-} from '@mui/material';
+import {AppBar,Toolbar,Box,Container,Typography,Stack,IconButton,Badge,Drawer,List,ListItemButton,ListItemIcon,ListItemText,Divider,Menu,MenuItem,TextField,InputAdornment,} from '@mui/material';
 import {
   FiSearch,
   FiUser,
@@ -43,9 +24,10 @@ import { useAuth } from '../../../context/AuthContext';
 import { useNotification } from '../../../context/NotificationContext';
 
 const NAV_LINKS = [
-  { key: 'shop', to: '/shop' },
-  { key: 'about', to: '/about' },
-  { key: 'contact', to: '/contact' },
+  { key: "home", to: "/" },
+  { key: "shop", to: "/shop" },
+  { key: "about", to: "/about" },
+  { key: "contact", to: "/contact" },
 ];
 
 export function Header() {
@@ -65,17 +47,27 @@ export function Header() {
   const toggleLanguage = () => i18n.changeLanguage(i18n.resolvedLanguage === 'en' ? 'ar' : 'en');
 
   const submitSearch = () => {
-    const query = searchValue.trim();
-    setSearchOpen(false);
-    navigate(query ? `/shop?search=${encodeURIComponent(query)}` : '/shop');
-  };
+  const query = searchValue.trim();
+
+  setSearchOpen(false);
+
+  navigate(
+    query
+      ? `/shop?search=${encodeURIComponent(query)}`
+      : "/shop"
+  );
+
+  setSearchValue("");
+};
 
   const handleLogout = () => {
-    logout();
-    setAccountAnchor(null);
-    notify('You have been logged out.');
-    navigate('/');
-  };
+  logout();
+  setAccountAnchor(null);
+
+  notify(t("auth.logoutSuccess"));
+
+  navigate("/");
+};
 
   return (
     <>
@@ -90,7 +82,7 @@ export function Header() {
           letterSpacing: '0.04em',
         }}
       >
-        Free shipping on orders over $50
+        {t("nav.freeShipping")}
       </Box>
 
       <AppBar
@@ -111,11 +103,18 @@ export function Header() {
                 component={NavLink}
                 to={link.to}
                 sx={{
-                  fontSize: '0.85rem',
-                  letterSpacing: '0.05em',
-                  textTransform: 'uppercase',
-                  color: 'inherit',
-                  '&.active': { color: 'var(--color-accent)' },
+                  fontSize: "0.85rem",
+                  letterSpacing: "0.05em",
+                  color: "inherit",
+                  textDecoration: "none",
+                  whiteSpace: "nowrap",
+                  px: 1,
+                  "&.active": {
+                    color: "var(--color-accent)",
+                  },
+                  "&:hover": {
+                    color: "var(--color-accent)",
+                  },
                 }}
               >
                 {t(`nav.${link.key}`)}
@@ -131,7 +130,18 @@ export function Header() {
             component={Link}
             to="/"
             variant="h5"
-            sx={{ fontFamily: 'var(--font-heading)', letterSpacing: '0.2em', color: 'inherit', whiteSpace: 'nowrap' }}
+            sx={{
+              fontFamily: "var(--font-heading)",
+              letterSpacing: "0.2em",
+              color: "inherit",
+              whiteSpace: "nowrap",
+              textDecoration: "none",
+              transition: ".3s",
+
+              "&:hover": {
+                opacity: .8,
+              },
+            }}
           >
             GLOWCARE
           </Typography>
@@ -169,7 +179,7 @@ export function Header() {
                   {isAdmin ? (
                     <MenuItem component={Link} to="/admin" onClick={() => setAccountAnchor(null)}>
                       <ListItemIcon><FiGrid size={16} /></ListItemIcon>
-                      Admin Dashboard
+                      {t("admin.dashboard")}
                     </MenuItem>
                   ) : (
                     <MenuItem component={Link} to="/profile" onClick={() => setAccountAnchor(null)}>

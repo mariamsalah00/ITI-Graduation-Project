@@ -1,5 +1,6 @@
 {
   "nav": {
+    "freeShipping": "Free shipping on orders over $50",
     "home": "Home",
     "shop": "Shop",
     "about": "About",
@@ -13,7 +14,21 @@
     "search": "Search"
   },
   "footer": {
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "shop": "Shop",
+    "help": "Help",
+    "company": "Company",
+    "allProducts": "All Products",
+    "skinQuiz": "Skin Quiz",
+    "bestSellers": "Best Sellers",
+    "newArrivals": "New Arrivals",
+    "contact": "Contact",
+    "shipping": "Shipping",
+    "returns": "Returns",
+    "faq": "FAQ",
+    "about": "About",
+    "home": "Home",
+    "profile": "Profile"
   },
   "common": {
     "loading": "Loading…",
@@ -41,6 +56,34 @@
     "newArrivals": "New Arrivals",
     "quizBanner": "Not sure where to start?",
     "quizCta": "Take the Skin Quiz"
+  },
+  "about": {
+  "title": "Our Story",
+  "description": "GLOWCARE started with a simple belief: skincare should be effective, honest, and kind to the skin you're in. Every formula is built around a handful of proven ingredients, backed by research and free of anything that doesn't earn its place in the bottle.",
+
+  "values": {
+    "cleanTitle": "Clean Formulas",
+    "cleanBody": "Every product is formulated without sulfates, parabens, or synthetic fragrance.",
+
+    "testedTitle": "Dermatologist Tested",
+    "testedBody": "Each formula is tested for safety and efficacy before it reaches you.",
+
+    "sustainableTitle": "Sustainably Sourced",
+    "sustainableBody": "Ingredients are sourced from partners who share our environmental standards."
+  }
+},
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Questions about a product or your order? Send us a message and we'll respond within one business day.",
+    "email": "hello@glowcare.com",
+    "workingHours": "Mon–Fri, 9am–5pm",
+
+    "name": "Name",
+    "emailLabel": "Email",
+    "message": "Message",
+
+    "send": "Send Message",
+    "success": "Thanks, {{name}}! We'll get back to you soon."
   },
   "shop": {
     "title": "Shop All",
