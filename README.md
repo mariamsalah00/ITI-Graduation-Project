@@ -19,38 +19,7 @@ Open the printed localhost URL (default `http://localhost:5173`).
 - **Admin:** `admin@glowcare.com` / `Admin123` → redirects to `/admin`
 - **Customer:** register any new account via `/register`
 
-## Changelog (latest round)
 
-- **Fixed the `products.map is not a function` crash**: `ProductsContext`/
-  `CategoriesContext` now validate the fetched data with `Array.isArray()`
-  instead of a truthy-only `|| []` check, and a failed/malformed fetch
-  surfaces as a real, retriable `ErrorState` everywhere (`Home`, `Shop`,
-  `ProductDetails`, `SkinQuiz`, both admin list pages) instead of crashing.
-- **Fixed a real dark-mode bug**: `--color-text-inverse` was being redefined
-  per-theme and ended up dark-on-dark on the footer/admin sidebar in dark
-  mode, making that text unreadable. It's now a constant light value used
-  specifically for ink surfaces, which stay dark in both themes.
-- **Added a router-level error boundary** (`RouteError.jsx`) so an
-  unexpected render crash shows a real screen instead of the raw
-  React Router stack trace.
-- **Header rebuilt**: working search (expands to a full-width field,
-  navigates to `/shop?search=...`), an auth-aware account menu with a
-  real "Log out" action (there previously wasn't one for customers —
-  only admins could log out), and icons reorganized so the toolbar
-  doesn't overflow on narrow screens (language/theme/wishlist move into
-  the mobile drawer at `xs`).
-- **Shop page search is now URL-synced** via `useSearchParams`, so the
-  header search, the page's own search field, and the back/forward
-  buttons all agree.
-- **Admin sidebar was unreachable on mobile** — it was `display: none`
-  below `md` with no alternate entry point at all. Added a temporary/
-  overlay Drawer variant plus a hamburger button in the admin Topbar.
-- **Skin Quiz**: selecting a concern no longer auto-reveals results —
-  there's now an explicit "See My Recommendations" button, so nothing
-  is shown until the person actually submits.
-- Login/Register redirect-back logic now survives hopping between the
-  two pages (a guest bounced to `/login` who clicks through to
-  `/register` lands back at their original destination, not always Home).
 
 ## What's implemented
 
