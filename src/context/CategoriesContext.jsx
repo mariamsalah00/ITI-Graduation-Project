@@ -1,9 +1,9 @@
-import { createContext, useContext, useEffect, useState } from 'react';
-import { useLocalStorage } from '../hooks/useLocalStorage';
-import { getCategories as fetchCategoriesJson } from '../services/categoryService';
+import { createContext, useContext, useEffect, useState } from "react";
+import { useLocalStorage } from "../hooks/useLocalStorage";
+import { getCategories as fetchCategoriesJson } from "../services/categoryService";
 
 const CategoriesContext = createContext(null);
-const STORAGE_KEY = 'glowcare_categories';
+const STORAGE_KEY = "glowcare_categories";
 
 // Same fix as ProductsContext: Array.isArray, not a truthy check, is what
 // actually guarantees .map()/.filter() are safe to call downstream.
@@ -20,7 +20,9 @@ export function CategoriesProvider({ children }) {
     fetchCategoriesJson()
       .then((data) => {
         if (!Array.isArray(data)) {
-          throw new Error(`Expected an array of categories, got ${typeof data}.`);
+          throw new Error(
+            `Expected an array of categories, got ${typeof data}.`,
+          );
         }
         setCategories(data);
       })
@@ -46,22 +48,41 @@ export function CategoriesProvider({ children }) {
   };
 
   const updateCategory = (id, updates) => {
-    setCategories((prev) => asArray(prev).map((c) => (String(c.id) === String(id) ? { ...c, ...updates } : c)));
+    setCategories((prev) =>
+      asArray(prev).map((c) =>
+        String(c.id) === String(id) ? { ...c, ...updates } : c,
+      ),
+    );
   };
 
   const deleteCategory = (id) => {
-    setCategories((prev) => asArray(prev).filter((c) => String(c.id) !== String(id)));
+    setCategories((prev) =>
+      asArray(prev).filter((c) => String(c.id) !== String(id)),
+    );
   };
 
   const retry = () => load();
 
-  const value = { categories: safeCategories, loading, error, retry, addCategory, updateCategory, deleteCategory };
+  const value = {
+    categories: safeCategories,
+    loading,
+    error,
+    retry,
+    addCategory,
+    updateCategory,
+    deleteCategory,
+  };
 
-  return <CategoriesContext.Provider value={value}>{children}</CategoriesContext.Provider>;
+  return (
+    <CategoriesContext.Provider value={value}>
+      {children}
+    </CategoriesContext.Provider>
+  );
 }
 
 export function useCategories() {
   const ctx = useContext(CategoriesContext);
-  if (!ctx) throw new Error('useCategories must be used within CategoriesProvider');
+  if (!ctx)
+    throw new Error("useCategories must be used within CategoriesProvider");
   return ctx;
 }

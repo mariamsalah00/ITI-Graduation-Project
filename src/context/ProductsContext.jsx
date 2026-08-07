@@ -1,10 +1,10 @@
-import { createContext, useContext, useEffect, useState } from 'react';
-import { useLocalStorage } from '../hooks/useLocalStorage';
-import { getProducts as fetchProductsJson } from '../services/productService';
+import { createContext, useContext, useEffect, useState } from "react";
+import { useLocalStorage } from "../hooks/useLocalStorage";
+import { getProducts as fetchProductsJson } from "../services/productService";
 
 const ProductsContext = createContext(null);
 
-const STORAGE_KEY = 'glowcare_products'; // separate from the read-only /data/products.json
+const STORAGE_KEY = "glowcare_products"; // separate from the read-only /data/products.json
 
 /**
  * Bug fixed here: the old guard was `products || []`, which only catches
@@ -58,11 +58,17 @@ export function ProductsProvider({ children }) {
   };
 
   const updateProduct = (id, updates) => {
-    setProducts((prev) => asArray(prev).map((p) => (String(p.id) === String(id) ? { ...p, ...updates } : p)));
+    setProducts((prev) =>
+      asArray(prev).map((p) =>
+        String(p.id) === String(id) ? { ...p, ...updates } : p,
+      ),
+    );
   };
 
   const deleteProduct = (id) => {
-    setProducts((prev) => asArray(prev).filter((p) => String(p.id) !== String(id)));
+    setProducts((prev) =>
+      asArray(prev).filter((p) => String(p.id) !== String(id)),
+    );
   };
 
   const retry = () => load();
@@ -78,11 +84,15 @@ export function ProductsProvider({ children }) {
     deleteProduct,
   };
 
-  return <ProductsContext.Provider value={value}>{children}</ProductsContext.Provider>;
+  return (
+    <ProductsContext.Provider value={value}>
+      {children}
+    </ProductsContext.Provider>
+  );
 }
 
 export function useProducts() {
   const ctx = useContext(ProductsContext);
-  if (!ctx) throw new Error('useProducts must be used within ProductsProvider');
+  if (!ctx) throw new Error("useProducts must be used within ProductsProvider");
   return ctx;
 }

@@ -1,5 +1,5 @@
-import { createContext, useCallback, useContext, useState } from 'react';
-import { Snackbar, Alert } from '@mui/material';
+import { createContext, useCallback, useContext, useState } from "react";
+import { Snackbar, Alert } from "@mui/material";
 
 const NotificationContext = createContext(null);
 
@@ -9,14 +9,18 @@ const NotificationContext = createContext(null);
  * own Snackbar — keeps toast position/timing/stacking consistent.
  */
 export function NotificationProvider({ children }) {
-  const [state, setState] = useState({ open: false, message: '', severity: 'success' });
+  const [state, setState] = useState({
+    open: false,
+    message: "",
+    severity: "success",
+  });
 
-  const notify = useCallback((message, severity = 'success') => {
+  const notify = useCallback((message, severity = "success") => {
     setState({ open: true, message, severity });
   }, []);
 
   const handleClose = (_, reason) => {
-    if (reason === 'clickaway') return;
+    if (reason === "clickaway") return;
     setState((prev) => ({ ...prev, open: false }));
   };
 
@@ -27,9 +31,14 @@ export function NotificationProvider({ children }) {
         open={state.open}
         autoHideDuration={3500}
         onClose={handleClose}
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
       >
-        <Alert onClose={handleClose} severity={state.severity} variant="filled" sx={{ width: '100%' }}>
+        <Alert
+          onClose={handleClose}
+          severity={state.severity}
+          variant="filled"
+          sx={{ width: "100%" }}
+        >
           {state.message}
         </Alert>
       </Snackbar>
@@ -39,6 +48,7 @@ export function NotificationProvider({ children }) {
 
 export function useNotification() {
   const ctx = useContext(NotificationContext);
-  if (!ctx) throw new Error('useNotification must be used within NotificationProvider');
+  if (!ctx)
+    throw new Error("useNotification must be used within NotificationProvider");
   return ctx;
 }

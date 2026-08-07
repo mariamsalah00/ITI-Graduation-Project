@@ -1,4 +1,11 @@
-import { Box, Card, CardContent, IconButton, Typography, Button } from "@mui/material";
+import {
+  Box,
+  Card,
+  CardContent,
+  IconButton,
+  Typography,
+  Button,
+} from "@mui/material";
 import { FiHeart } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -10,6 +17,11 @@ import { useNotification } from "../../context/NotificationContext";
 import { PriceTag } from "./PriceTag";
 import { StarRating } from "./StarRating";
 
+/**
+ * @param {{product: Object}} props - `product` is a full product object
+ *   (id, name, brand, category, image, price, oldPrice, rating, stock, ...).
+ */
+
 export function ProductCard({ product }) {
   const { t } = useTranslation();
 
@@ -20,6 +32,7 @@ export function ProductCard({ product }) {
   const inWishlist = isInWishlist(product.id);
   const outOfStock = product.stock <= 0;
 
+  /** Adds 1 unit to the cart and shows a confirmation toast. */
   const handleAddToCart = (e) => {
     e.preventDefault();
     addItem(product, 1);
@@ -33,10 +46,10 @@ export function ProductCard({ product }) {
     notify(
       inWishlist
         ? t("product.removedFromWishlist")
-        : t("product.addedToWishlist")
+        : t("product.addedToWishlist"),
     );
   };
-console.log(product);
+  console.log(product);
   return (
     <Card
       component={Link}
@@ -81,11 +94,7 @@ console.log(product);
         <IconButton
           onClick={handleToggleWishlist}
           size="small"
-          aria-label={
-            inWishlist
-              ? t("wishlist.remove")
-              : t("wishlist.add")
-          }
+          aria-label={inWishlist ? t("wishlist.remove") : t("wishlist.add")}
           sx={{
             position: "absolute",
             top: 8,
@@ -99,15 +108,9 @@ console.log(product);
         >
           <FiHeart
             color={
-              inWishlist
-                ? "var(--color-error)"
-                : "var(--color-text-primary)"
+              inWishlist ? "var(--color-error)" : "var(--color-text-primary)"
             }
-            fill={
-              inWishlist
-                ? "var(--color-error)"
-                : "none"
-            }
+            fill={inWishlist ? "var(--color-error)" : "none"}
           />
         </IconButton>
 
@@ -121,7 +124,7 @@ console.log(product);
               color: "var(--color-text-inverse)",
               fontSize: ".7rem",
               px: 1,
-              py: .25,
+              py: 0.25,
               borderRadius: "var(--radius-sm)",
             }}
           >
@@ -147,8 +150,8 @@ console.log(product);
           sx={{
             fontWeight: 500,
             lineHeight: 1.3,
-            mt: .5,
-            mb: .5,
+            mt: 0.5,
+            mb: 0.5,
           }}
           noWrap
         >
@@ -166,10 +169,7 @@ console.log(product);
             gap: 1,
           }}
         >
-          <PriceTag
-            price={product.price}
-            oldPrice={product.oldPrice}
-          />
+          <PriceTag price={product.price} oldPrice={product.oldPrice} />
 
           <Button
             size="small"
@@ -186,6 +186,5 @@ console.log(product);
         </Box>
       </CardContent>
     </Card>
-    
   );
 }

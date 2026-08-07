@@ -1,10 +1,10 @@
-import { ThemeModeProvider } from './ThemeModeContext';
-import { NotificationProvider } from './NotificationContext';
-import { AuthProvider } from './AuthContext';
-import { CartProvider } from './CartContext';
-import { WishlistProvider } from './WishlistContext';
-import { ProductsProvider } from './ProductsContext';
-import { CategoriesProvider } from './CategoriesContext';
+import { ThemeModeProvider } from "./ThemeModeContext";
+import { NotificationProvider } from "./NotificationContext";
+import { AuthProvider } from "./AuthContext";
+import { CartProvider } from "./CartContext";
+import { WishlistProvider } from "./WishlistContext";
+import { ProductsProvider } from "./ProductsContext";
+import { CategoriesProvider } from "./CategoriesContext";
 
 /**
  * Single composition point for every context provider. Order matters only
