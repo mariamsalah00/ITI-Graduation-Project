@@ -75,13 +75,5 @@ src/
 public/data/         products.json, categories.json (read-only source data)
 ```
 
-## Known limitations (transparency, not hidden gaps)
 
-- Product photography is placehold.co placeholder images (labelled with
-  the product name) — swap the `image` field in
-  `public/data/products.json` for real photography when you have it.
-- Exact pixel/hex/font fidelity to the Figma file is not guaranteed —
-  see "Design tokens are still provisional" above.
-- Checkout payment fields are format-validated only (Yup regex) — there
-  is no real payment processing, per the "no backend" requirement.
 # ITI-Graduation-Project
