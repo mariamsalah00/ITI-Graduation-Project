@@ -44,14 +44,7 @@ notifications via a single `NotificationContext`, responsive grid
 layouts throughout, guest guards on Cart/Wishlist/Checkout/Profile,
 admin guard on `/admin/*`.
 
-## Design tokens are still provisional
 
-`src/styles/variables.css` holds every color/font/spacing value and is
-clearly marked as a visual approximation of the screenshots you shared —
-not exact Figma Inspect values. Nothing else in the app hardcodes a
-color or font; everything reads from that one file (directly in CSS,
-and via `src/theme/getTheme.js` for MUI), so sending real hex/px/font
-values only requires editing that single file.
 
 ## Project structure
 
